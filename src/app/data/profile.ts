@@ -1,21 +1,21 @@
 export const profile = {
-  name: "Gyul Mung",
+  name: "문승현",
   role: "Frontend Developer",
-  oneLiner: "사용자 경험과 상태 흐름을 중요하게 생각하는 프론트엔드 개발자",
+  oneLiner: "사용자 경험과 성능을 기준으로 기술을 선택하는 프론트엔드 개발자",
   contact: {
-    email: "your@email.com",
-    github: "https://github.com/yourid",
-    blog: "https://yourblog.com",
+    email: "herdboy0531@gmail.com",
+    github: "https://github.com/HerdBoy0531",
+    blog: "https://herdboyofcode.tistory.com/",
   },
   background: [
     "학력: ...",
     "경력/경험: ...",
   ],
   skills: {
-    frontend: ["React", "TypeScript", "Vite", "Tailwind", "Framer Motion"],
-    state: ["Zustand", "React Query (optional)"],
+    frontend: ["React", "Vue.js", "TypeScript", "Vite", "Tailwind"],
+    state: ["Zustand", "React Query"],
     realtime: ["WebSocket", "STOMP", "WebRTC"],
-    backend: ["Spring Boot", "Django (경험)"],
-    tools: ["Git", "GitHub Actions", "Figma"],
+    backend: ["Django"],
+    tools: ["Git", "GitHub Actions", "Figma", "JIRA"],
   },
 };
