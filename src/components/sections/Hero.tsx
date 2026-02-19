@@ -1,35 +1,55 @@
 import { Container } from "../layout/Container";
+import { Mail, Github, PenTool } from "lucide-react";
 import { profile } from "../../app/data/profile";
 
 export function Hero() {
   return (
-    <section id="top" className="py-16 sm:py-20">
+    <section className="py-32">
       <Container>
-        <div className="space-y-4">
-          <p className="text-sm text-zinc-600 dark:text-zinc-300">{profile.role}</p>
-          <h1 className="text-3xl font-bold tracking-tight sm:text-5xl">
-            {profile.oneLiner}
-          </h1>
-          <p className="max-w-2xl text-zinc-600 dark:text-zinc-300">
-            React · TypeScript · 상태 관리 · 실시간 서비스(WebRTC/WebSocket)
-          </p>
-
-          <div className="flex flex-wrap gap-3 pt-2">
-            <a
-              className="rounded-lg border border-zinc-200 px-4 py-2 text-sm hover:bg-zinc-50 dark:border-zinc-800 dark:hover:bg-zinc-900"
-              href="#projects"
-            >
-              Projects 보기
-            </a>
-            <a
-              className="rounded-lg bg-zinc-900 px-4 py-2 text-sm text-white hover:opacity-90 dark:bg-white dark:text-zinc-900"
-              href={profile.contact.github}
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
+        <div className="text-4xl sm:text-6xl font-bold leading-tight tracking-tight space-y-9">
+          <div className="text-left">
+            사용자의 경험과 성능을 기준으로
           </div>
+          <div className="text-right">
+            기술을 선택하는 프론트엔드 개발자
+          </div>
+        </div>
+
+        {/* 🔥 중앙 아이콘 영역 */}
+        <div className="mt-16 flex justify-center gap-8">
+          <a
+            href={`mailto:${profile.contact.email}`}
+            className="group transition-transform duration-300 hover:scale-110"
+          >
+            <Mail
+              size={28}
+              className="text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
+            />
+          </a>
+
+          <a
+            href={profile.contact.github}
+            target="_blank"
+            rel="noreferrer"
+            className="group transition-transform duration-300 hover:scale-110"
+          >
+            <Github
+              size={28}
+              className="text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
+            />
+          </a>
+
+          <a
+            href={profile.contact.blog}
+            target="_blank"
+            rel="noreferrer"
+            className="group transition-transform duration-300 hover:scale-110"
+          >
+            <PenTool
+              size={28}
+              className="text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
+            />
+          </a>
         </div>
       </Container>
     </section>

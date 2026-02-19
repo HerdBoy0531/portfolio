@@ -1,6 +1,37 @@
 export const profile = {
   name: "문승현",
+  image: "",
   role: "Frontend Developer",
+  education: [
+    {
+      name: "전남대 동물자원학부",
+      period: "2016.03 ~ 2022.02",
+      result: "학사졸업"
+    },
+    {
+      name: "전남대 동물산업학과",
+      period: "2023.03 ~ 2025.02",
+      result: "석사졸업"
+    },
+    {
+      name: "SSAFY 13기",
+      period: "2025.01 ~ 2025.12",
+      result: "수료"
+    },
+  ],
+
+  certificates: [
+    {
+      name:"SQLD",
+      date:"2025.07",
+    },
+  ],
+
+  keywords: [
+    "배움에 대한 열정",
+    "성능 최적화 집착",
+    "실시간 서비스 경험",
+  ],
   oneLiner: "사용자 경험과 성능을 기준으로 기술을 선택하는 프론트엔드 개발자",
   contact: {
     email: "herdboy0531@gmail.com",
@@ -19,3 +50,77 @@ export const profile = {
     tools: ["Git", "GitHub Actions", "Figma", "JIRA"],
   },
 };
+
+export const skillsData = {
+  Frontend: [
+    {
+      name: "React",
+      level: 4, // 1~5
+      logo: "/portfolio/logos/react.png",
+      description: "프로젝트 이용 경험 있음",
+    },
+    {
+      name: "Vue",
+      level: 3,
+      logo: "/portfolio/logos/vuejs.png",
+      description: "사이드 프로젝트 사용",
+    },
+  ],
+  Backend: [
+        {
+      name: "React",
+      level: 4, // 1~5
+      logo: "/logos/react.png",
+      description: "프로젝트 이용 경험 있음",
+    },
+    {
+      name: "Vue",
+      level: 3,
+      logo: "/logos/vue.png",
+      description: "사이드 프로젝트 사용",
+    },
+  ],
+  Language: [
+        {
+      name: "React",
+      level: 4, // 1~5
+      logo: "/logos/react.png",
+      description: "프로젝트 이용 경험 있음",
+    },
+    {
+      name: "Vue",
+      level: 3,
+      logo: "/logos/vue.png",
+      description: "사이드 프로젝트 사용",
+    },
+  ],
+  DataBase: [
+        {
+      name: "React",
+      level: 4, // 1~5
+      logo: "/logos/react.png",
+      description: "프로젝트 이용 경험 있음",
+    },
+    {
+      name: "Vue",
+      level: 3,
+      logo: "/logos/vue.png",
+      description: "사이드 프로젝트 사용",
+    },
+  ],
+  AI: [
+        {
+      name: "React",
+      level: 4, // 1~5
+      logo: "/logos/react.png",
+      description: "프로젝트 이용 경험 있음",
+    },
+    {
+      name: "Vue",
+      level: 3,
+      logo: "/logos/vue.png",
+      description: "사이드 프로젝트 사용",
+    },
+  ],
+};
+
