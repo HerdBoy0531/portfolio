@@ -60,7 +60,7 @@ export const skillsData = {
       description: "프로젝트 이용 경험 있음",
     },
     {
-      name: "Vue",
+      name: "Vue.js",
       level: 3,
       logo: "/portfolio/logos/vuejs.png",
       description: "사이드 프로젝트 사용",

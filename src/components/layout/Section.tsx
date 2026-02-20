@@ -9,7 +9,7 @@ export const Section = forwardRef<
     <section
       id={id}
       ref={ref}
-      className="py-16 sm:py-20 scroll-mt-20"
+      className="py-10 sm:py-20 scroll-mt-20"
     >
       <Container>
         <div className="mb-8">

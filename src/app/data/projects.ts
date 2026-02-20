@@ -6,7 +6,7 @@ export type Project = {
   thumbnail?: string; // public/ 에 이미지 넣고 "/thumb.png" 형태로
   stack: string[];
   role: string[];
-  links: { github?: string; demo?: string; docs?: string };
+  links: { github?: string; demo?: string; notion?: string };
   summary: string[];
   details: {
     problem: string[];
@@ -26,7 +26,10 @@ export const projects: Project[] = [
     thumbnail: "/thumb-samsung.png",
     stack: ["Vue.js", "TypeScript", "Tailwind", "Pinia", "REST API"],
     role: ["Project Leader", "Frontend 개발", "UI/UX 설계", "API 연동"],
-    links: { github: "https://github.com/yourid/samsung-project" },
+    links: { 
+      github: "https://github.com/HerdBoy0531/portfolio",
+      notion: "https://www.notion.so/26ffb03a3dc880d59730e6e6e5f1778a?source=copy_link"
+    },
 
     summary: [
       "AI 인재 추천 탭 UI 설계 및 구현",
@@ -84,7 +87,10 @@ export const projects: Project[] = [
     thumbnail: "/thumb-curation.png",
     stack: ["React", "TypeScript", "Zustand", "Tailwind", "LangChain", "AI Agent"],
     role: ["Project Leader", "Frontend 개발", "UI/UX 구현", "AI 기능 연동"],
-    links: { github: "https://github.com/yourid/today-curation" },
+    links: { 
+      github: "https://github.com/HerdBoy0531/Today-Curation-OQ-",
+      notion: "https://www.notion.so/26ffb03a3dc880d59730e6e6e5f1778a?source=copy_link"
+    },
 
     summary: [
       "AI 기반 옷 착장(Try-On) UI 및 외부 API 연동",
@@ -171,7 +177,10 @@ export const projects: Project[] = [
       "실시간 통신 구조 설계",
       "게임 UI 아키텍처 설계"
     ],
-    links: { github: "https://github.com/yourid/yolo-bring-it" },
+    links: { 
+      github: "https://github.com/HerdBoy0531/YOLO-Bring-It",
+      notion: "https://www.notion.so/26ffb03a3dc880d59730e6e6e5f1778a?source=copy_link"
+    },
 
     summary: [
       "WebRTC 기반 실시간 멀티플레이어 게임 플랫폼 프론트엔드 설계 및 구현",

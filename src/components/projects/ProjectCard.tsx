@@ -15,10 +15,14 @@ export function ProjectCard({
 
   return (
     <div className="rounded-2xl border border-zinc-200 p-5 dark:border-zinc-800">
-      <div className="grid gap-4 sm:grid-cols-[180px_1fr]">
-        <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+      <div className="grid gap-4 sm:grid-cols-[minmax(220px,260px)_1fr] items-center">
+        <div className="overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800 aspect-square w-full">
           {p.thumbnail ? (
-            <img src={p.thumbnail} alt={p.title} className="h-[120px] w-full object-cover sm:h-[140px]" />
+            <img
+              src={p.thumbnail}
+              alt={p.title}
+              className="h-full w-full object-cover "
+            />
           ) : (
             <div className="flex h-[120px] items-center justify-center bg-zinc-100 text-xs text-zinc-500 dark:bg-zinc-900 dark:text-zinc-400 sm:h-[140px]">
               Thumbnail
@@ -35,14 +39,37 @@ export function ProjectCard({
               <p className="text-sm text-zinc-600 dark:text-zinc-300">{p.subtitle}</p>
               {p.period && <p className="mt-1 text-xs text-zinc-500">{p.period}</p>}
             </div>
+              <div className="flex gap-3">
+                {p.links.github && (
+                  <a
+                    href={p.links.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="h-[25px] w-[25px] transition duration-200 group-hover:scale-110 group-hover:opacity-80 dark:invert"
+                  >
+                    <img
+                      src="/portfolio/logos/github.png"
+                      alt="GitHub"
+                      className="h-[25px] w-[25px] transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1 dark:invert"
+                    />
+                  </a>
+                )}
 
-            <button
-              onClick={() => setOpenId(isOpen ? null : p.id)}
-              className="shrink-0 rounded-lg border border-zinc-200 px-3 py-2 text-xs hover:bg-zinc-50 dark:border-zinc-800 dark:hover:bg-zinc-900"
-              aria-expanded={isOpen}
-            >
-              {isOpen ? "닫기 ▲" : "자세히 보기 ▼"}
-            </button>
+                {p.links.notion && (
+                  <a
+                    href={p.links.notion}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="h-[25px] w-[25px] transition duration-200 group-hover:scale-110 group-hover:opacity-80 dark:invert"
+                  >
+                    <img
+                      src="/portfolio//logos/notion.png"
+                      alt="Notion"
+                      className="h-[25px] w-[25px] transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1 dark:invert"
+                    />
+                  </a>
+                )}
+              </div>
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2">
@@ -86,9 +113,9 @@ export function ProjectCard({
                 Demo
               </a>
             )}
-            {p.links.docs && (
-              <a className="underline text-zinc-700 dark:text-zinc-200" href={p.links.docs} target="_blank" rel="noreferrer">
-                Docs
+            {p.links.notion && (
+              <a className="underline text-zinc-700 dark:text-zinc-200" href={p.links.notion} target="_blank" rel="noreferrer">
+                Notion
               </a>
             )}
           </div>

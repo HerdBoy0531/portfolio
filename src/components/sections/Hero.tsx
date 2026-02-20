@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="py-32">
       <Container>
-        <div className="text-4xl sm:text-6xl font-bold leading-tight tracking-tight space-y-9">
+        <div className="text-4xl sm:text-6xl font-bold leading-tight tracking-tight space-y-9 ">
           <div className="text-left">
             사용자의 경험과 성능을 기준으로
           </div>
