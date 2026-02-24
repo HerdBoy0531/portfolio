@@ -25,7 +25,7 @@ export const projects: Project[] = [
     period: "2025.10 - 2025.12",
     thumbnail: "/thumb-samsung.png",
     stack: ["Vue.js", "TypeScript", "Tailwind", "Pinia", "REST API"],
-    role: ["Project Leader", "Frontend 개발", "UI/UX 설계", "API 연동"],
+    role: ["Project Leader", "Frontend 개발", "UI/UX 설계 및 구현", "API 연동"],
     links: { 
       github: "https://github.com/HerdBoy0531/portfolio",
       notion: "https://www.notion.so/26ffb03a3dc880d59730e6e6e5f1778a?source=copy_link"
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     period: "2025.08 - 2025.10",
     thumbnail: "/thumb-curation.png",
     stack: ["React", "TypeScript", "Zustand", "Tailwind", "LangChain", "AI Agent"],
-    role: ["Project Leader", "Frontend 개발", "UI/UX 구현", "AI 기능 연동"],
+    role: ["Project Leader", "Frontend 개발", "UI/UX 설계 및 구현", "AI 기능 연동"],
     links: { 
       github: "https://github.com/HerdBoy0531/Today-Curation-OQ-",
       notion: "https://www.notion.so/26ffb03a3dc880d59730e6e6e5f1778a?source=copy_link"
@@ -175,7 +175,8 @@ export const projects: Project[] = [
     role: [
       "Frontend Leader",
       "실시간 통신 구조 설계",
-      "게임 UI 아키텍처 설계"
+      "게임 UI 아키텍처 설계",
+      "UI/UX 설계 및 구현"
     ],
     links: { 
       github: "https://github.com/HerdBoy0531/YOLO-Bring-It",

@@ -5,7 +5,7 @@ export function ProjectDetails({ p }: { p: Project }) {
     <div className="mt-4 space-y-6 text-sm text-zinc-600 dark:text-zinc-300">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <p className="mb-2 font-medium text-zinc-900 dark:text-white">Problem</p>
+          <p className="mb-2 text-md font-medium text-zinc-900 dark:text-white">Problem</p>
           <ul className="space-y-1">
             {p.details.problem.map((x, i) => (
               <li key={i}>• {x}</li>

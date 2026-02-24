@@ -108,7 +108,7 @@ export const About = forwardRef<HTMLElement>((_, ref) => {
 
         <div className="grid gap-12 lg:grid-cols-3">
 
-          {/* 🔥 1️⃣ 왼쪽 - 사진 */}
+          {/* 1️⃣ 왼쪽 - 사진 */}
           <div className="flex justify-center lg:justify-start items-center">
             <div className="w-64 h-64 overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800">
               <img
@@ -119,53 +119,62 @@ export const About = forwardRef<HTMLElement>((_, ref) => {
             </div>
           </div>
 
-          {/* 🔥 2️⃣ 가운데 - 정보 */}
-          <div className="space-y-8">
+          {/* 2️⃣ 오른쪽 전체 (교육 + 자격증 가로 배치) */}
+          <div className="lg:col-span-3 space-y-8">
             <h2 className="text-3xl font-bold">{profile.name}</h2>
 
-            <div>
-              <p className="mb-3 text-lg font-semibold">교육사항</p>
-              <ul className="space-y-4 text-zinc-600 dark:text-zinc-300">
-                {profile.education.map((edu) => (
-                  <li key={edu.name}>
-                    <div className="font-medium text-zinc-900 dark:text-white">
-                      • {edu.name} ({edu.result})
-                    </div>
-                    <div className="text-sm text-zinc-500">
-                      {edu.period}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* 🔥 교육 + 자격증 가로 정렬 */}
+            <div className="grid md:grid-cols-2 gap-12">
 
-            <div>
-              <p className="mb-3 text-lg font-semibold">자격증</p>
-              <ul className="space-y-4 text-zinc-600 dark:text-zinc-300">
-                {profile.certificates.map((cert) => (
-                  <li key={cert.name}>
-                    <div className="font-medium text-zinc-900 dark:text-white">
-                      • {cert.name}
-                    </div>
-                    <div className="text-sm text-zinc-500">
-                      {cert.date}
-                    </div>
-                  </li>
-                ))}
-              </ul>
+              {/* 교육사항 */}
+              <div>
+                <p className="mb-3 text-lg font-semibold">교육사항</p>
+                <ul className="space-y-4 text-zinc-600 dark:text-zinc-300">
+                  {profile.education.map((edu) => (
+                    <li key={edu.name}>
+                      <div className="font-medium text-zinc-900 dark:text-white">
+                        • {edu.name} ({edu.result})
+                      </div>
+                      <div className="text-sm text-zinc-500">
+                        {edu.period}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 자격증 */}
+              <div>
+                <p className="mb-3 text-lg font-semibold">자격증</p>
+                <ul className="space-y-4 text-zinc-600 dark:text-zinc-300">
+                  {profile.certificates.map((cert) => (
+                    <li key={cert.name}>
+                      <div className="font-medium text-zinc-900 dark:text-white">
+                        • {cert.name}
+                      </div>
+                      <div className="text-sm text-zinc-500">
+                        {cert.date}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
             </div>
           </div>
 
-          {/* 🔥 3️⃣ 오른쪽 - 키워드 */}
-          <div className="flex flex-col justify-center space-y-6 text-right">
-            {profile.keywords.map((keyword) => (
-              <div
-                key={keyword}
-                className="text-xl font-semibold text-zinc-500 dark:text-zinc-400"
-              >
-                #{keyword}
-              </div>
-            ))}
+          {/* 🔥 3️⃣ 키워드 - 전체 한 줄로 아래 배치 */}
+          <div className="lg:col-span-4">
+            <div className="flex flex-wrap gap-4 justify-center">
+              {profile.keywords.map((keyword) => (
+                <span
+                  key={keyword}
+                  className="px-2 py-2 text-xl font-semibold text-zinc-600 dark:text-zinc-300"
+                >
+                  #{keyword}
+                </span>
+              ))}
+            </div>
           </div>
 
         </div>

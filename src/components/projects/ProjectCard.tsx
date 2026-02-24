@@ -74,7 +74,7 @@ export function ProjectCard({
 
           <div className="grid gap-3 sm:grid-cols-2">
             <div>
-              <p className="mb-1 text-xs font-medium text-zinc-900 dark:text-white">Tech Stack</p>
+              <p className="mb-1 text-md font-semibold text-zinc-900 dark:text-white">Tech Stack</p>
               <div className="flex flex-wrap gap-2">
                 {p.stack.map((s) => (
                   <span key={s} className="rounded-full bg-zinc-100 px-3 py-1 text-xs dark:bg-zinc-900">
@@ -84,7 +84,7 @@ export function ProjectCard({
               </div>
             </div>
             <div>
-              <p className="mb-1 text-xs font-medium text-zinc-900 dark:text-white">My Role</p>
+              <p className="mb-1 text-md font-semibold text-zinc-900 dark:text-white">My Role</p>
               <ul className="space-y-1 text-xs text-zinc-600 dark:text-zinc-300">
                 {p.role.map((r) => (
                   <li key={r}>• {r}</li>
@@ -94,7 +94,7 @@ export function ProjectCard({
           </div>
 
           <div>
-            <p className="mb-1 text-xs font-medium text-zinc-900 dark:text-white">Quick Intro</p>
+            <p className="mb-1 text-md font-semibold text-zinc-900 dark:text-white">Quick Intro</p>
             <ul className="space-y-1 text-xs text-zinc-600 dark:text-zinc-300">
               {p.summary.map((x, i) => (
                 <li key={i}>• {x}</li>
@@ -102,25 +102,9 @@ export function ProjectCard({
             </ul>
           </div>
 
-          <div className="flex flex-wrap gap-3 pt-1 text-sm">
-            {p.links.github && (
-              <a className="underline text-zinc-700 dark:text-zinc-200" href={p.links.github} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            )}
-            {p.links.demo && (
-              <a className="underline text-zinc-700 dark:text-zinc-200" href={p.links.demo} target="_blank" rel="noreferrer">
-                Demo
-              </a>
-            )}
-            {p.links.notion && (
-              <a className="underline text-zinc-700 dark:text-zinc-200" href={p.links.notion} target="_blank" rel="noreferrer">
-                Notion
-              </a>
-            )}
-          </div>
 
-          <AnimatePresence initial={false}>
+
+          {/* <AnimatePresence initial={false}>
             {isOpen && (
               <motion.div
                 key="details"
@@ -133,7 +117,7 @@ export function ProjectCard({
                 <ProjectDetails p={p} />
               </motion.div>
             )}
-          </AnimatePresence>
+          </AnimatePresence> */}
         </div>
       </div>
     </div>

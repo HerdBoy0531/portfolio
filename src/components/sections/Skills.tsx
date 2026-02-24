@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { Container } from "../layout/Container";
-import { skillsData } from "../../app/data/profile";
+import { skillsData } from "../../app/data/skillsData";
 import { Section } from "../layout/Section";
 
 const categories = Object.keys(skillsData);
 
 const categoryColors: Record<string, string> = {
-  Frontend: "bg-blue-600",
-  Backend: "bg-green-600",
-  Language: "bg-purple-600",
-  DataBase: "bg-yellow-500",
-  AI: "bg-pink-600",
+  Core: "bg-blue-600",
+  "State & Architecture": "bg-emerald-600",
+  "Real-time & Async": "bg-purple-600",
+  Performance: "bg-orange-500",
+  "Styling & UX": "bg-pink-600",
 };
 
 export function Skills() {
@@ -21,16 +21,16 @@ export function Skills() {
     <Section id="skills" title="Skills">
       <Container>
 
-        {/* 🔥 상단 탭 */}
-        <div className="flex flex-wrap justify-between border-b border-zinc-300 pb-6 text-xl font-semibold">
+        {/* 탭 */}
+        <div className="flex flex-wrap justify-center gap-4 pb-6">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActive(cat)}
-              className={`pb-2 transition-all ${
+              className={`px-5 py-2 rounded-full text-xl font-medium transition-colors ${
                 active === cat
-                  ? "border-b-2 border-black dark:border-white text-black dark:text-white"
-                  : "text-zinc-400 hover:text-black dark:hover:text-white"
+                ? "bg-black text-white dark:bg-white dark:text-black"
+                : "text-zinc-500 hover:bg-zinc-200 dark:hover:bg-zinc-800"
               }`}
             >
               {cat}
@@ -38,24 +38,24 @@ export function Skills() {
           ))}
         </div>
 
-        {/* 🔥 기술 카드 리스트 */}
-        <div className="mt-16 space-y-12">
+        {/* 카드 리스트 */}
+        <div className="mt-10 space-y-6">
           {skills.map((skill) => (
             <div
               key={skill.name}
-              className="rounded-2xl border border-zinc-200 p-8 shadow-sm dark:border-zinc-800"
+              className="rounded-xl border border-zinc-200 p-5 shadow-sm hover:shadow-md transition dark:border-zinc-800"
             >
-              {/* 🔥 상단: 이름 + 숙련도 */}
-              <div className="flex items-center justify-between mb-8">
-                <p className="text-2xl font-semibold">
+              {/* 상단 */}
+              <div className="flex items-center justify-between mb-4">
+                <p className="text-xl font-semibold">
                   {skill.name}
                 </p>
 
-                <div className="flex gap-2">
+                <div className="flex gap-1">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <div
                       key={i}
-                      className={`h-2 w-7 rounded-full ${
+                      className={`h-1.5 w-6 rounded-full ${
                         i <= skill.level
                           ? categoryColors[active]
                           : "bg-zinc-300 dark:bg-zinc-700"
@@ -65,27 +65,24 @@ export function Skills() {
                 </div>
               </div>
 
-              {/* 🔥 하단: 로고 + 설명 */}
-              <div className="flex items-center gap-8">
-                {/* 로고 */}
-                <div className="w-24 h-24 flex items-center justify-center">
-                  <img
-                    src={skill.logo}
-                    alt={skill.name}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+              {/* 하단 */}
+              <div className="flex items-center gap-4">
+                {skill.logo ? (
+                  <img src={skill.logo} className="w-12 h-12 object-contain" />
+                ) : skill.icon ? (
+                  <skill.icon className="w-12 h-12 text-zinc-600 dark:text-zinc-300" />
+                ) : null}
 
-                {/* 설명 */}
-                <div className="text-zinc-600 dark:text-zinc-300">
-                  <p className="mb-2 font-medium">
-                    {skill.description}
-                  </p>
 
-                  {/* 필요하면 추가 설명 가능 */}
-                  {/* <p className="text-sm text-zinc-500">
-                    주요 사용: 상태 관리, 컴포넌트 설계, 최적화 경험
-                  </p> */}
+                <div className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
+                  <ul className="text-sm text-zinc-600 dark:text-zinc-300 space-y-1">
+                    {skill.descriptions.map((desc, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-zinc-400" />
+                        <span className="leading-relaxed">{desc}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>

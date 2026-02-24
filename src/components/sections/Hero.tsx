@@ -7,10 +7,10 @@ export function Hero() {
     <section className="py-32">
       <Container>
         <div className="text-4xl sm:text-6xl font-bold leading-tight tracking-tight space-y-9 ">
-          <div className="text-left">
+          <div className="text-center">
             사용자의 경험과 성능을 기준으로
           </div>
-          <div className="text-right">
+          <div className="text-center">
             기술을 선택하는 프론트엔드 개발자
           </div>
         </div>
