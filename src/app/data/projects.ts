@@ -180,7 +180,7 @@ export const projects: Project[] = [
     ],
     links: { 
       github: "https://github.com/HerdBoy0531/YOLO-Bring-It",
-      notion: "https://www.notion.so/26ffb03a3dc880d59730e6e6e5f1778a?source=copy_link"
+      notion: "https://www.notion.so/YOLO-Bring-It-312fb03a3dc88004b27de8ea7be80091?source=copy_link"
     },
 
     summary: [
