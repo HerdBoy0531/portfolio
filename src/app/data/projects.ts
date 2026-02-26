@@ -89,7 +89,7 @@ export const projects: Project[] = [
     role: ["Project Leader", "Frontend 개발", "UI/UX 설계 및 구현", "AI 기능 연동"],
     links: { 
       github: "https://github.com/HerdBoy0531/Today-Curation-OQ-",
-      notion: "https://www.notion.so/26ffb03a3dc880d59730e6e6e5f1778a?source=copy_link"
+      notion: "https://www.notion.so/OQ-312fb03a3dc88029865aed373dedf424?source=copy_link"
     },
 
     summary: [
