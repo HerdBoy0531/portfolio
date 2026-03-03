@@ -3,14 +3,11 @@ import {logos} from "../../assets/logos/";
 
 export function ProjectCard({
   p,
-  openId,
 }: {
   p: Project;
   openId: string | null;
   setOpenId: (id: string | null) => void;
 }) {
-  const isOpen = openId === p.id;
-
   return (
     <div className="rounded-2xl border border-zinc-200 p-5 dark:border-zinc-800">
       <div className="grid gap-4 sm:grid-cols-[minmax(220px,260px)_1fr] items-center">
@@ -100,22 +97,6 @@ export function ProjectCard({
             </ul>
           </div>
 
-
-
-          {/* <AnimatePresence initial={false}>
-            {isOpen && (
-              <motion.div
-                key="details"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.22 }}
-                className="overflow-hidden"
-              >
-                <ProjectDetails p={p} />
-              </motion.div>
-            )}
-          </AnimatePresence> */}
         </div>
       </div>
     </div>
