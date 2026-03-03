@@ -23,12 +23,12 @@ export const projects: Project[] = [
     title: "ST-Hub (삼성전자 기업 연계 프로젝트)",
     subtitle: "AI 기반 이력서 자동 등록 및 인재 추천 서비스",
     period: "2025.10 - 2025.12",
-    thumbnail: "/thumb-samsung.png",
+    thumbnail: "/portfolio/public/mains/SThub_Main.png",
     stack: ["Vue.js", "TypeScript", "Tailwind", "Pinia", "REST API"],
     role: ["Project Leader", "Frontend 개발", "UI/UX 설계 및 구현", "API 연동"],
     links: { 
       github: "https://github.com/HerdBoy0531/portfolio",
-      notion: "https://www.notion.so/26ffb03a3dc880d59730e6e6e5f1778a?source=copy_link"
+      notion: "https://www.notion.so/STHub-318fb03a3dc880c78d5afbaa6a23f9c1?source=copy_link"
     },
 
     summary: [
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     title: "오늘의 큐레이션",
     subtitle: "LangChain & AI Agent 기반 TPO 옷 추천 서비스",
     period: "2025.08 - 2025.10",
-    thumbnail: "/thumb-curation.png",
+    thumbnail: "/portfolio/public/mains/OQ_Main.png",
     stack: ["React", "TypeScript", "Zustand", "Tailwind", "LangChain", "AI Agent"],
     role: ["Project Leader", "Frontend 개발", "UI/UX 설계 및 구현", "AI 기능 연동"],
     links: { 
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     title: "YOLO Bring It",
     subtitle: "WebRTC 기반 실시간 멀티플레이어 게임 플랫폼",
     period: "2025.07 - 2025.08",
-    thumbnail: "/thumb-yolo.png",
+    thumbnail: "/portfolio/public/mains/YOLO_Main.png",
     stack: [
       "React",
       "TypeScript",

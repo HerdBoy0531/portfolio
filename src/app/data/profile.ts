@@ -1,6 +1,6 @@
 export const profile = {
   name: "문승현",
-  image: "",
+  image: "/portfolio/src/assets/profile.jpg",
   role: "Frontend Developer",
   education: [
     {
@@ -26,7 +26,6 @@ export const profile = {
       date:"2025.07",
     },
   ],
-
   keywords: [
     "배움에 대한 열정",
     "성능 최적화 집착",
@@ -38,10 +37,6 @@ export const profile = {
     github: "https://github.com/HerdBoy0531",
     blog: "https://herdboyofcode.tistory.com/",
   },
-  background: [
-    "학력: ...",
-    "경력/경험: ...",
-  ],
   skills: {
     frontend: ["React", "Vue.js", "TypeScript", "Vite", "Tailwind"],
     state: ["Zustand", "React Query"],

@@ -1,11 +1,8 @@
-import { motion, AnimatePresence } from "framer-motion";
 import type { Project } from "../../app/data/projects";
-import { ProjectDetails } from "./ProjectDetails";
 
 export function ProjectCard({
   p,
   openId,
-  setOpenId,
 }: {
   p: Project;
   openId: string | null;

@@ -21,9 +21,10 @@ export function Hero() {
             href={`mailto:${profile.contact.email}`}
             className="group transition-transform duration-300 hover:scale-110"
           >
-            <Mail
-              size={28}
-              className="text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
+            <img
+              src="/portfolio/src/assets/logos/gmail.svg"
+              alt="GitHub"
+              className="h-[30px] w-[30px] text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
             />
           </a>
 
@@ -33,9 +34,10 @@ export function Hero() {
             rel="noreferrer"
             className="group transition-transform duration-300 hover:scale-110"
           >
-            <Github
-              size={28}
-              className="text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
+            <img
+              src="/portfolio/logos/github.png"
+              alt="GitHub"
+              className="h-[30px] w-[30px] text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
             />
           </a>
 
@@ -45,9 +47,10 @@ export function Hero() {
             rel="noreferrer"
             className="group transition-transform duration-300 hover:scale-110"
           >
-            <PenTool
-              size={28}
-              className="text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
+            <img
+              src="/portfolio/src/assets/logos/tistory.svg"
+              alt="GitHub"
+              className="h-[29px] w-[25px] text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
             />
           </a>
         </div>

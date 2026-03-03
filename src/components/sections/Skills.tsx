@@ -55,7 +55,7 @@ export function Skills() {
                   {[1, 2, 3, 4, 5].map((i) => (
                     <div
                       key={i}
-                      className={`h-1.5 w-6 rounded-full ${
+                      className={`h-3.5 w-6 rounded-full ${
                         i <= skill.level
                           ? categoryColors[active]
                           : "bg-zinc-300 dark:bg-zinc-700"
