@@ -6,7 +6,6 @@ import { ProjectCard } from "../projects/ProjectCard";
 export function Projects() {
   const [openId, setOpenId] = useState<string | null>(null);
 
-  // (선택) 해시로 특정 프로젝트 바로 열기: /#projects + #yolo 같은 UX
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
     if (hash === "projects") return;

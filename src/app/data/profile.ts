@@ -19,7 +19,6 @@ export const profile = {
       result: "수료"
     },
   ],
-
   certificates: [
     {
       name:"SQLD",

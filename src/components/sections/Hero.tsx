@@ -1,6 +1,6 @@
 import { Container } from "../layout/Container";
-import { Mail, Github, PenTool } from "lucide-react";
 import { profile } from "../../app/data/profile";
+import { logos } from "../../assets/logos/";
 
 export function Hero() {
   return (
@@ -15,14 +15,13 @@ export function Hero() {
           </div>
         </div>
 
-        {/* 🔥 중앙 아이콘 영역 */}
         <div className="mt-16 flex justify-center gap-8">
           <a
             href={`mailto:${profile.contact.email}`}
             className="group transition-transform duration-300 hover:scale-110"
           >
             <img
-              src="/portfolio/src/assets/logos/gmail.svg"
+              src={logos.gmail}
               alt="GitHub"
               className="h-[30px] w-[30px] text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
             />
@@ -35,7 +34,7 @@ export function Hero() {
             className="group transition-transform duration-300 hover:scale-110"
           >
             <img
-              src="/portfolio/logos/github.png"
+              src={logos.github}
               alt="GitHub"
               className="h-[30px] w-[30px] text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
             />
@@ -48,7 +47,7 @@ export function Hero() {
             className="group transition-transform duration-300 hover:scale-110"
           >
             <img
-              src="/portfolio/src/assets/logos/tistory.svg"
+              src={logos.tistory}
               alt="GitHub"
               className="h-[29px] w-[25px] text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
             />

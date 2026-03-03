@@ -6,6 +6,15 @@ import javascript from "../../assets/logos/javascript.svg";
 import typescript from "../../assets/logos/typescript.svg";
 import tailwind from "../../assets/logos/tailwind.svg";
 import vuejs from "../../assets/logos/vue.svg";
+import zustand from "../../assets/logos/zustand.jpg";
+import github from "../../assets/logos/github.png";
+import notion from "../../assets/logos/notion.png";
+import gmail from "../../assets/logos/gmail.svg"
+import tistory from "../../assets/logos/tistory.svg";
+import OQ from "../../assets/logos/OQ_Main.png";
+import SThub from "../../assets/logos/SThub_Main.png";
+import YOLO from "../../assets/logos/YOLO_Main.png";
+
 
 
 export const logos ={
@@ -17,4 +26,12 @@ export const logos ={
   framer,
   websocket,
   webrtc,
+  zustand,
+  github,
+  notion,
+  OQ,
+  SThub,
+  YOLO,
+  gmail,
+  tistory,
 }

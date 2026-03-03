@@ -66,7 +66,7 @@ export const skillsData: Record<string, Skill[]> = {
     {
       name: "Zustand",
       level: 2,
-      logo: "/portfolio/public/logos/zustand.jpg",
+      logo: logos.zustand,
       descriptions: [
         "도메인 단위 store 분리로 전역 상태 구조 설계",
         "상태 변경에 따른 렌더링 영향 고려 및 선택적 구독 활용",

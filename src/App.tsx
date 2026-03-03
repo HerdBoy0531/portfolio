@@ -13,7 +13,7 @@ export default function App() {
   const handleIntroFinish = () => {
     setTimeout(() => {
       setShowIntro(false);
-    }, 800); // fade 시간과 맞춤
+    }, 800);
   };
 
   return (

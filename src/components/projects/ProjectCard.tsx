@@ -1,4 +1,5 @@
 import type { Project } from "../../app/data/projects";
+import {logos} from "../../assets/logos/";
 
 export function ProjectCard({
   p,
@@ -45,7 +46,7 @@ export function ProjectCard({
                     className="h-[25px] w-[25px] transition duration-200 group-hover:scale-110 group-hover:opacity-80 dark:invert"
                   >
                     <img
-                      src="/portfolio/logos/github.png"
+                      src={logos.github}
                       alt="GitHub"
                       className="h-[25px] w-[25px] transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1 dark:invert"
                     />
@@ -60,7 +61,7 @@ export function ProjectCard({
                     className="h-[25px] w-[25px] transition duration-200 group-hover:scale-110 group-hover:opacity-80 dark:invert"
                   >
                     <img
-                      src="/portfolio//logos/notion.png"
+                      src={logos.notion}
                       alt="Notion"
                       className="h-[25px] w-[25px] transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1 dark:invert"
                     />

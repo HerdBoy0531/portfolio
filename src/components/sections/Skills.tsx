@@ -21,7 +21,6 @@ export function Skills() {
     <Section id="skills" title="Skills">
       <Container>
 
-        {/* 탭 */}
         <div className="flex flex-wrap justify-center gap-4 pb-6">
           {categories.map((cat) => (
             <button
@@ -38,14 +37,12 @@ export function Skills() {
           ))}
         </div>
 
-        {/* 카드 리스트 */}
         <div className="mt-10 space-y-6">
           {skills.map((skill) => (
             <div
               key={skill.name}
               className="rounded-xl border border-zinc-200 p-5 shadow-sm hover:shadow-md transition dark:border-zinc-800"
             >
-              {/* 상단 */}
               <div className="flex items-center justify-between mb-4">
                 <p className="text-xl font-semibold">
                   {skill.name}
@@ -65,7 +62,6 @@ export function Skills() {
                 </div>
               </div>
 
-              {/* 하단 */}
               <div className="flex items-center gap-4">
                 {skill.logo ? (
                   <img src={skill.logo} className="w-12 h-12 object-contain" />
