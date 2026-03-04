@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Container } from "../layout/Container";
 import { skillsData } from "../../app/data/skillsData";
 import { Section } from "../layout/Section";
+import { logos } from "../../assets/logos/";
 
 const categories = Object.keys(skillsData);
 
@@ -39,6 +40,7 @@ export function Skills() {
 
         <div className="mt-10 space-y-6">
           {skills.map((skill) => (
+            
             <div
               key={skill.name}
               className="rounded-xl border border-zinc-200 p-5 shadow-sm hover:shadow-md transition dark:border-zinc-800"
@@ -63,12 +65,21 @@ export function Skills() {
               </div>
 
               <div className="flex items-center gap-4">
+                
                 {skill.logo ? (
-                  <img src={skill.logo} className="w-12 h-12 object-contain" />
+                  
+                  // <img src={skill.logo} className="w-12 h-12 object-contain" />
+                  <img 
+                    src={skill.logo} 
+                    className={`w-12 h-12 object-contain ${
+                      skill.logo === logos.websocket ? "dark:invert" : ""
+                    }`}
+                  />
+                  
                 ) : skill.icon ? (
                   <skill.icon className="w-12 h-12 text-zinc-600 dark:text-zinc-300" />
                 ) : null}
-
+                
 
                 <div className="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">
                   <ul className="text-sm text-zinc-600 dark:text-zinc-300 space-y-1">

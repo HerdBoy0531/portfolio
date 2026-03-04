@@ -36,7 +36,7 @@ export function Hero() {
             <img
               src={logos.github}
               alt="GitHub"
-              className="h-[30px] w-[30px] text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white"
+              className="h-[30px] w-[30px] text-zinc-500 transition-colors group-hover:text-black dark:group-hover:text-white dark:invert"
             />
           </a>
 

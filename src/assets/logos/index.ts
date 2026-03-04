@@ -6,7 +6,7 @@ import javascript from "../../assets/logos/javascript.svg";
 import typescript from "../../assets/logos/typescript.svg";
 import tailwind from "../../assets/logos/tailwind.svg";
 import vuejs from "../../assets/logos/vue.svg";
-import zustand from "../../assets/logos/zustand.jpg";
+import zustand from "../../assets/logos/zustand.png";
 import github from "../../assets/logos/github.png";
 import notion from "../../assets/logos/notion.png";
 import gmail from "../../assets/logos/gmail.svg"

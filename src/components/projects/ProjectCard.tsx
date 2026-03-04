@@ -45,7 +45,7 @@ export function ProjectCard({
                     <img
                       src={logos.github}
                       alt="GitHub"
-                      className="h-[25px] w-[25px] transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1 dark:invert"
+                      className="h-[25px] w-[25px] transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1"
                     />
                   </a>
                 )}
@@ -60,7 +60,7 @@ export function ProjectCard({
                     <img
                       src={logos.notion}
                       alt="Notion"
-                      className="h-[25px] w-[25px] transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1 dark:invert"
+                      className="h-[25px] w-[25px] transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1"
                     />
                   </a>
                 )}
