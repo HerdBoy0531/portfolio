@@ -8,76 +8,92 @@ export const About = forwardRef<HTMLElement>((_, ref) => {
     <Section id="about" title="About Me" ref={ref}>
       <Container>
 
-        <div className="grid gap-12 lg:grid-cols-3">
+        <div className="space-y-12">
 
-          {/* 1️⃣ 왼쪽 - 사진 */}
-          <div className="flex justify-center lg:justify-start items-center">
-            <div className="w-64 h-64 overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800">
-              <img
-                src={profile.image}
-                alt="profile"
-                className="w-full h-full object-cover"
-              />
+          {/* About Me */}
+          <div className="max-w-5xl">
+            <p className="text-zinc-600 dark:text-zinc-300 leading-relaxed whitespace-pre-line">
+              {profile.about}
+            </p>
+          </div>
+
+          {/* 3컬럼 */}
+          <div className="grid md:grid-cols-3 gap-12">
+
+            {/* 교육 */}
+            <div>
+              <p className="mb-3 text-lg font-semibold">교육</p>
+              <ul className="space-y-4 text-zinc-600 dark:text-zinc-300">
+                {profile.education.map((edu) => (
+                  <li key={edu.name}>
+                    <div className="font-medium text-zinc-900 dark:text-white">
+                      • {edu.name} ({edu.result})
+                    </div>
+                    <div className="text-sm text-zinc-500">
+                      {edu.period}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 자격증 */}
+            <div>
+              <p className="mb-3 text-lg font-semibold">자격증</p>
+              <ul className="space-y-4 text-zinc-600 dark:text-zinc-300">
+                {profile.certificates.map((cert) => (
+                  <li key={cert.name}>
+                    <div className="font-medium text-zinc-900 dark:text-white">
+                      • {cert.name}
+                    </div>
+                    <div className="text-sm text-zinc-500">
+                      {cert.date}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              {/* 어학 */}
+              <p className="mt-8 mb-3 text-lg font-semibold">어학</p>
+              <ul className="space-y-4 text-zinc-600 dark:text-zinc-300">
+                {profile.languages.map((lang) => (
+                  <li key={lang.name}>
+                    <div className="font-medium text-zinc-900 dark:text-white">
+                      • {lang.name}
+                    </div>
+                    <div className="text-sm text-zinc-500">
+                      {lang.level}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 기술 스택 추가 */}
+            <div>
+              <p className="mb-3 text-lg font-semibold">Frontend</p>
+
+              <ul className="space-y-2 text-zinc-600 dark:text-zinc-300">
+                {profile.skills.frontend.map((skill) => (
+                  <li key={skill} className="font-medium">
+                    • {skill}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          {/* 2️⃣ 오른쪽 전체 (교육 + 자격증 가로 배치) */}
-          <div className="lg:col-span-3 space-y-8">
-            <h2 className="text-3xl font-bold">{profile.name}</h2>
-
-            {/* 🔥 교육 + 자격증 가로 정렬 */}
-            <div className="grid md:grid-cols-2 gap-12">
-
-              {/* 교육사항 */}
-              <div>
-                <p className="mb-3 text-lg font-semibold">교육사항</p>
-                <ul className="space-y-4 text-zinc-600 dark:text-zinc-300">
-                  {profile.education.map((edu) => (
-                    <li key={edu.name}>
-                      <div className="font-medium text-zinc-900 dark:text-white">
-                        • {edu.name} ({edu.result})
-                      </div>
-                      <div className="text-sm text-zinc-500">
-                        {edu.period}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* 자격증 */}
-              <div>
-                <p className="mb-3 text-lg font-semibold">자격증</p>
-                <ul className="space-y-4 text-zinc-600 dark:text-zinc-300">
-                  {profile.certificates.map((cert) => (
-                    <li key={cert.name}>
-                      <div className="font-medium text-zinc-900 dark:text-white">
-                        • {cert.name}
-                      </div>
-                      <div className="text-sm text-zinc-500">
-                        {cert.date}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-          {/* 🔥 3️⃣ 키워드 - 전체 한 줄로 아래 배치 */}
-          <div className="lg:col-span-4">
-            <div className="flex flex-wrap gap-4 justify-center">
-              {profile.keywords.map((keyword) => (
-                <span
-                  key={keyword}
-                  className="px-2 py-2 text-xl font-semibold text-zinc-600 dark:text-zinc-300"
-                >
-                  #{keyword}
-                </span>
-              ))}
-            </div>
-          </div>
+          {/* 키워드 */}
+          {/* <div className="flex flex-wrap gap-6 justify-center">
+            {profile.keywords.map((keyword) => (
+              <span
+                key={keyword}
+                className="text-xl font-semibold text-zinc-400 hover:text-white transition"
+              >
+                #{keyword}
+              </span>
+            ))}
+          </div> */}
 
         </div>
 
@@ -85,3 +101,4 @@ export const About = forwardRef<HTMLElement>((_, ref) => {
     </Section>
   );
 });
+

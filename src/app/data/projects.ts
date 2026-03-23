@@ -34,10 +34,17 @@ export const projects: Project[] = [
     },
 
     summary: [
-      "AI 인재 추천 탭 UI 설계 및 구현",
-      "LLM 응답 Parsing 및 추천 결과 정렬 로직 개발",
-      "추천 탭 전용 Skeleton UI 및 Pinia 기반 전역 상태 관리",
-      "Polling 기반 AI 연산 단계 실시간 표시 시스템 구축"
+      "[Frontend] AI 인재 추천 서비스의 사용자 입력부터 결과 확인까지 end-to-end UI 흐름 설계 및 구현",
+      "[Frontend] Pinia 기반 전역 상태 관리 및 컴포넌트 분리를 통한 유지보수성과 확장성 개선",
+      "[Frontend] 추천 결과 비교가 용이한 카드형 UI 및 상태 기반 뷰 전환 로직 설계",
+
+      "[UX / Realtime] 추천 탭 전용 Skeleton UI 및 상태 기반 화면 전환으로 사용자 대기 경험 개선",
+      "[UX / Realtime] Polling 기반 AI 연산 단계(대기 → 분석 → 결과 생성) 실시간 표시 시스템 구축",
+      "[UX / Realtime] 비동기 처리 중에도 사용자 인터랙션이 끊기지 않도록 UX 흐름 설계",
+
+      "[AI Integration] LLM 응답 Parsing 및 추천 결과 정렬 로직 구현",
+      "[AI Integration] 비정형 텍스트 데이터를 구조화(JSON)하여 일관된 UI 출력 처리",
+
     ],
 
     details: {
@@ -95,10 +102,16 @@ export const projects: Project[] = [
     },
 
     summary: [
-      "AI 기반 옷 착장(Try-On) UI 및 외부 API 연동",
-      "AI 추천 결과 챗 인터페이스 및 스트리밍 렌더링 구현",
-      "이미지 업로드/처리/최적화 전반 구조 설계",
-      "서비스 운영 환경 이슈 해결 및 유지보수"
+      "[Frontend] AI 기반 Try-On UI 및 사용자 입력 흐름 설계",
+      "[Frontend] 전체 페이지 리로드 제거 및 부분 렌더링 구조 구현으로 UX 개선",
+      "[Frontend] Zustand 기반 상태 관리로 이미지 업로드 및 착장 결과 반영 흐름 최적화",
+
+      "[UX / Realtime] AI 응답을 한 글자씩 출력하는 스트리밍 UI로 자연스러운 사용자 경험 구현",
+      "[UX / Realtime] 이미지 업로드 즉시 반영 및 처리 최적화를 통한 대기 시간 개선",
+      "[UX / Realtime] 이미지 디코딩 및 압축 처리로 브라우저 렌더링 안정성 확보",
+
+      "[AI Integration] 외부 Try-On 모델 API 연동 및 의상 적용 로직 구현",
+      "[AI Integration] AI 추천 결과 챗 UI 구현 및 스트리밍 렌더링 처리",
     ],
 
     details: {
@@ -186,10 +199,16 @@ export const projects: Project[] = [
     },
 
     summary: [
-      "WebRTC 기반 실시간 멀티플레이어 게임 플랫폼 프론트엔드 설계 및 구현",
-      "Lobby부터 Result까지 전체 게임 흐름 UI 및 상태 구조 설계",
-      "WebSocket 기반 실시간 채팅 및 친구 시스템 구축",
-      "3D 캐릭터 렌더링 최적화 및 로딩 성능 개선"
+      "[Frontend] Lobby → Game → Result까지 전체 게임 흐름 UI 및 상태 구조 설계",
+      "[Frontend] Zustand 기반 전역 상태 관리로 복잡한 게임 단계 전환 로직 단일화",
+      "[Frontend] 상점, 친구, 업적 등 도메인 단위 UI 분리 및 컴포넌트 아키텍처 설계",
+
+      "[Realtime] WebRTC 기반 멀티플레이어 통신 구조 연동 및 UI 상태 동기화",
+      "[Realtime] WebSocket(STOMP) 기반 실시간 채팅 및 친구 시스템 구현",
+
+      "[3D / Performance] Three.js 기반 캐릭터 렌더링 및 씬 구성",
+      "[3D / Performance] 폴리곤 최적화 및 Lazy Loading 적용으로 초기 로딩 시간 5초 → 2초 단축",
+      "[3D / Performance] 3D 리소스 경량화를 통한 사용자 체감 성능 개선"
     ],
 
     details: {

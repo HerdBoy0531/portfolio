@@ -35,7 +35,38 @@ export function ProjectCard({
               {p.period && <p className="mt-1 text-xs text-zinc-500">{p.period}</p>}
             </div>
               <div className="flex gap-3">
-                {p.links.github && (
+                {p.id === "samsung" ? (
+                  <div className="relative group inline-block">
+                  <img
+                    src={logos.github}
+                    alt="GitHub"
+                    className="h-[25px] w-[25px] invert transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1"
+                  />
+
+                  {/* Tooltip */}
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 
+                                  hidden group-hover:block whitespace-nowrap 
+                                  text-xs text-white bg-black px-2 py-1 rounded">
+                    기업 보안으로 인한 소스코드 공개 불가
+                  </div>
+                </div>
+                ) : (
+                  p.links.github && (
+                    <a 
+                      href={p.links.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="h-[25px] w-[25px] transition duration-200 group-hover:scale-110 group-hover:opacity-80 dark:invert"
+                    >
+                      <img
+                        src={logos.github}
+                        alt="GitHub"
+                        className="h-[25px] w-[25px] transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1"
+                      />
+                    </a>
+                  )
+                )}
+                {/* {p.links.github && (
                   <a
                     href={p.links.github}
                     target="_blank"
@@ -48,7 +79,7 @@ export function ProjectCard({
                       className="h-[25px] w-[25px] transition-transform duration-300 ease-out hover:scale-125 hover:-translate-y-1"
                     />
                   </a>
-                )}
+                )} */}
 
                 {p.links.notion && (
                   <a
@@ -89,7 +120,7 @@ export function ProjectCard({
           </div>
 
           <div>
-            <p className="mb-1 text-md font-semibold text-zinc-900 dark:text-white">Quick Intro</p>
+            <p className="mb-1 text-md font-semibold text-zinc-900 dark:text-white">Core Contributions</p>
             <ul className="space-y-1 text-xs text-zinc-600 dark:text-zinc-300">
               {p.summary.map((x, i) => (
                 <li key={i}>• {x}</li>
